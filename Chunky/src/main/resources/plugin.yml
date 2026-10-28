@@ -1,0 +1,132 @@
+name: Chunky
+main: dev.chunky.plugin.ChunkyPlugin
+version: '${project.version}'
+api-version: '1.21'
+description: Privates Admin-Plugin (nur Owner)
+author: Owner
+
+permissions:
+  chunky.use:
+    description: Erlaubt alle privaten Chunky-Befehle. Wird Owner-UUIDs aus der config.yml automatisch zugewiesen.
+    default: false
+
+commands:
+  chunky:
+    description: Info, eigene UUID anzeigen, Konfiguration neu laden
+    usage: /chunky [uuid|reload|help]
+  invsee:
+    description: Inventar eines Spielers ansehen/bearbeiten
+    usage: /invsee <Spieler>
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  ecsee:
+    description: Endertruhe ansehen/bearbeiten
+    usage: /ecsee [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  locate:
+    description: Position eines Spielers anzeigen / hinteleportieren
+    usage: /locate <Spieler> [tp]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  heal:
+    description: Gesundheit und Hunger auffüllen
+    usage: /heal [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  feed:
+    description: Hunger auffüllen
+    usage: /feed [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  give:
+    description: Items geben
+    usage: /give <Item> <Anzahl> [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  army:
+    description: Mobs auf einen Spieler spawnen
+    usage: /army <Mob> <Anzahl> <Spieler>
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  spawn:
+    description: Mobs spawnen (vereinfachtes /summon)
+    usage: /spawn <Mob> [Anzahl] [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  bolt:
+    description: Blitz auslösen
+    usage: /bolt [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  lightningstick:
+    description: Blitzstab erhalten
+    usage: /lightningstick
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  missile:
+    description: Unsichtbarer Creeper neben einem Spieler
+    usage: /missile <Spieler>
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  sphere:
+    description: Hohle Kugel bauen
+    usage: /sphere <Block> <Radius>
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  time:
+    description: Weltzeit setzen
+    usage: /time [set] <day|noon|night|midnight|Ticks> [Welt]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  weather:
+    description: Wetter setzen
+    usage: /weather <clear|rain|thunder> [Sekunden] [Welt]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  vanish:
+    description: Unsichtbar werden (bleibt in der Tab-Liste, Fliegen aktiv)
+    aliases: [v]
+    usage: /vanish
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  be:
+    description: Als Mob, Block oder Item verkleiden
+    usage: /be <mob|item|block> <Name> [Items] | /be off
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  tp:
+    description: Teleportieren
+    usage: /tp <Spieler> | <Spieler> <Ziel> | <x> <y> <z> | <Spieler> <x> <y> <z>
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  creative:
+    description: Kreativmodus
+    usage: /creative [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  survival:
+    description: Überlebensmodus
+    usage: /survival [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  spectator:
+    description: Zuschauermodus
+    usage: /spectator [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  god:
+    description: Unverwundbarkeit umschalten
+    usage: /god [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  fly:
+    description: Flugmodus umschalten
+    usage: /fly [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."
+  speed:
+    description: Geh-/Fluggeschwindigkeit setzen
+    usage: /speed <0-10|reset> [Spieler]
+    permission: chunky.use
+    permission-message: "§cChunky: Du bist kein Owner. Mit /chunky uuid siehst du deine UUID."

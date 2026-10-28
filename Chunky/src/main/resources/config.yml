@@ -1,0 +1,32 @@
+# Chunky – Konfiguration
+
+# UUIDs der Owner (Mehrere möglich). Die richtige UUID zeigt dir /chunky uuid
+# (funktioniert für jeden Spieler). Online-Server und Offline-Server (online-mode=false)
+# haben für denselben Namen UNTERSCHIEDLICHE UUIDs!
+owner-uuids:
+  - "3366ca8f-cf48-4081-ba14-172d31c7bd3c"
+
+# Nur ein Hinweis (gibt KEINE Rechte): Wenn ein Spieler mit diesem Namen joint, aber
+# seine UUID nicht in owner-uuids steht, bekommt er eine Warnung mit seiner echten UUID.
+owner-name-hint: ""
+
+limits:
+  army-max: 100
+  spawn-max: 100
+  give-max-amount: 10000
+  give-max-dropped-stacks: 64
+  sphere-max-radius: 30        # harte Obergrenze im Code: 100
+  sphere-max-blocks: 50000
+  sphere-blocks-per-tick: 5000
+  sphere-only-replace-replaceable: true   # true = nur Luft/Wasser/Gras o.Ä. ersetzen; false = alles überschreiben
+
+missile:
+  lifetime-seconds: 30
+  explosion-radius: 3
+  fuse-ticks: 30
+  block-damage: false          # false = Explosion zerstört keine Blöcke
+
+# Diese Entity-Typen (Schlüsselname ohne "minecraft:") sind für /spawn und /army gesperrt
+blocked-entities:
+  - ender_dragon
+  - wither
